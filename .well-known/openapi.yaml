@@ -4,7 +4,7 @@ info:
   description: A retrieval API for querying and filtering documents based on natural language queries and metadata
   version: 1.0.0
   servers:
-    - url: https://your-app-url.com
+    - url: https://johann-l-pickard-curly-fishstick-p67jr4gpr4g269q4-3333.preview.app.github.dev/
 paths:
   /query:
     post:

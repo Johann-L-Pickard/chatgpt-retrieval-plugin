@@ -5,6 +5,17 @@ from fastapi import FastAPI, File, Form, HTTPException, Depends, Body, UploadFil
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi.staticfiles import StaticFiles
 from loguru import logger
+from dotenv import load_dotenv
+import pathlib  # add this import statement
+
+# Get the directory of the current script
+current_directory = pathlib.Path(__file__).parent
+
+# Construct the path to the .env file located in the directory above
+env_path = current_directory / '..' / '.env'
+
+# Load the environment variables from the .env file
+load_dotenv(dotenv_path=env_path.resolve())
 
 from models.api import (
     DeleteRequest,
